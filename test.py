@@ -35,4 +35,3 @@ for iter in range(15000):
     #forward propagation
     l0 = X
     l1 = nonlin(np.dot(l0, syn0))
-    
