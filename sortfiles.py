@@ -15,16 +15,10 @@ files = os.listdir(source)
 thm = "thm"
 THM = "THM"
 
-#print(files)
-
-# for f in files:
-#     if ((f.find("THM")) == -1):
-#         continue
-#     else:
-#         print("File: {}", f)
 
 for f in files:
-    if ((thm in f) or (THM in f)):
-        print("File: {}", f)
+    if ((thm in f) or (THM in f) or ("main" in f)):
+        print(f"File: {f}")
     else:
-        print("Normal file: {}", f)
+        print(f"\tDesired file: {f}")
+        shutil.move(source + "\\" + f, dest)
